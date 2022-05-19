@@ -70,6 +70,7 @@ class NotifyShell(CBPiExtension):
             #pushoverData["message"] = message 
             #pushoverData["title"] = title
             #requests.post("https://api.pushover.net/1/messages.json", data=pushoverData)
+            logger.warning('DAVID: Trying to send a notification')
             p = subprocess.run("/bin/bash", shell_command, title, messageEvent)
 
 def setup(cbpi):
